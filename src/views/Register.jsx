@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/user/Navbar";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { saveUserAsync } from "../../../action/User/UserregisterAction";
 const Register = () => {
   const navigate = useNavigate();
   const { loading, success, error } = useSelector((state) => state.register);
@@ -93,7 +94,7 @@ const Register = () => {
             autoComplete="given-name"
             name="email"
             onChange={(e) => setEmail(e.target.value)}
-            value={name}
+            value={email}
              />
           </div>
         </div>
