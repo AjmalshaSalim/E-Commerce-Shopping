@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="flex w-full bg-white h-24 text-center font-josefin-sans">
       <div className="nav_left w-1/3">
-        <ul className="flex justify-center gap-10 pt-7">
+        <ul className="flex justify-center gap-10 pt-7 pl-3">
           <li className="nav_title">Home</li>
           <li className="nav_title">Cart</li>
           <li className="nav_title">Orders</li>
