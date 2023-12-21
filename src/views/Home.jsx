@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Banner from '../components/Banner'
-import Cards from '../components/Cards'
+import Navbar from '../components/user/Navbar'
+import Banner from '../components/user/Banner'
+import Cards from '../components/user/Cards'
 
 const Home = () => {
   return (
@@ -16,7 +16,6 @@ const Home = () => {
             <Cards/>
             <Cards/>
         </div>
-        Home
     </div>
   )
 }

@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         'josefin-sans': ['Josefin Sans', 'sans-serif'],
       },
+      colors:{
+        customOutline: '#0000002c',
+      }
     },
   },
   plugins: [],

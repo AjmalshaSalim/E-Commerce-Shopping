@@ -1,6 +1,7 @@
 import React from "react";
 import { IoIosSearch } from "react-icons/io";
 import { FiHeart } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -14,13 +15,15 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="nav_center w-1/3">
+        <Link to="/">
         <h1 className="pt-7 text-2xl">LOGO</h1>
+        </Link> 
       </div>
       <div className="nav_right w-1/3">
         <ul className="flex justify-center gap-10 pt-7">
           <li className="nav_title text-lg"> <IoIosSearch /> </li>
           <li className="nav_title"> <FiHeart /> </li>
-          <li className="nav_title">Log In</li>
+          <li className="nav_title" ><Link to="/Login">Log In</Link></li>
           <li className="nav_title">About Us</li>
         </ul>
       </div>
