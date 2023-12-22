@@ -4,12 +4,11 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/user/Navbar";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { saveUserAsync } from "../../../action/User/UserregisterAction";
+import { saveUserAsync } from "../actions/userRegisterAction";
 const Register = () => {
   const navigate = useNavigate();
   const { loading, success, error } = useSelector((state) => state.register);
-  const dispatch = useDispatch();
-  const [name, setName] = useState("");
+  const [credential, setCredential] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phonenumber, setPhonenumber] = useState("");
@@ -19,34 +18,17 @@ const Register = () => {
     setPhonenumber(phonenumberValue);
 
     // Regular expression for validating a phone number
-    const phoneNumberRegex = /^\d{10}$/;
+    // const phoneNumberRegex = /^\d{10}$/;
 
-    if (phoneNumberRegex.test(phonenumberValue)) {
-      setPhoneNumberError(false);
-    } else {
-      setPhoneNumberError(true);
-    }
-  };
+const handleChange= () =>{
+
+}
   const HandleSubmit = (e) => {
     e.preventDefault();
-    const user = {
-      name,
-      email,
-      phonenumber,
-      password,
-    };
-    dispatch(saveUserAsync(user));
+
   };
 
-  useEffect(() => {
-    if (success) {
-      setName("");
-      setEmail("");
-      setPassword("");
-      navigate("/userlogin");
-    }
-  }, [success, navigate]);
-  
+
   return (
     <>
     <Navbar/>
@@ -64,7 +46,7 @@ const Register = () => {
             className="input_column outline-none"
             autoComplete="given-name"
             name="fullName"
-            onChange={(e) => setName(e.target.value)}
+            // onChange={(e) => setName(e.target.value)}
             value={name}
               />
           </div>
@@ -78,7 +60,7 @@ const Register = () => {
             className="input_column outline-none"
             autoComplete="given-name"
             name="phone"
-            onChange={(e) => setPhonenumber(e.target.value)}
+            // onChange={(e) => setPhonenumber(e.target.value)}
             error={phoneNumberError}
             value={phonenumber}
              />
@@ -93,7 +75,7 @@ const Register = () => {
             className="input_column outline-none"
             autoComplete="given-name"
             name="email"
-            onChange={(e) => setEmail(e.target.value)}
+            // onChange={(e) => setEmail(e.target.value)}
             value={email}
              />
           </div>
@@ -107,7 +89,7 @@ const Register = () => {
             className="input_column outline-none"
             autoComplete="given-name"
             name="password"
-            onChange={(e) => setPassword(e.target.value)}
+            // onChange={(e) => setPassword(e.target.value)}
             value={password}
              />
           </div>

@@ -1,11 +1,14 @@
-import './App.css';
-import MainRoutes from './routes/MainRoutes'
+import MainRoutes from "../src/routes/MainRoutes";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 function App() {
   return (
-    <>
-     <MainRoutes/>
-    </>
+    <div className="App">
+       <Provider store={store}>
+      <MainRoutes/>
+    </Provider>
+    </div>
   );
 }
 
