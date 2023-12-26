@@ -41,7 +41,7 @@ export const Login = () => {
     <div className="lg:flex flex-col items-center font-josefin-sans justify-center">
       <Navbar />
       <div className="bg-white p-8 w-96">
-        <h2 className="text-4xl font-bold mb-4">Login</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center">Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block mb-1">Username:</label>

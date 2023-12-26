@@ -58,7 +58,7 @@ const Card = () => {
             style={{ minWidth: "300px" }}
           >
             <div className=" shadow-md pb-3">
-              <div className="mb-4 w-full h-60 overflow-hidden">
+              <div className="mb-4 w-full h-80 overflow-hidden">
                 <img
                   src={cardImg}
                   alt={card.title}

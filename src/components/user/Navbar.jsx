@@ -17,7 +17,7 @@ const Navbar = () => {
       </div>
       <div className=" pl-2 lg:w-1/3">
         <Link to="/">
-        <h1 className="pt-7 text-2xl">LOGO</h1>
+        <h1 className="pt-7 text-2xl font-semibold">LOGO</h1>
         </Link> 
       </div>
       <div className="nav_right w-1/3">
