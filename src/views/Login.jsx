@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Navbar from "../components/user/Navbar";
 import { Link } from "react-router-dom";
+import useraxios from "../useraxios"; // Update the path
 
-const Login = () => {
-  const [credential,setCredential]=useState({
-    email: "",
+export const Login = () => {
+  const [credential, setCredential] = useState({
+    username: "",
     password: "",
-  })
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCredential((prev) => {
@@ -17,68 +19,77 @@ const Login = () => {
     });
   };
 
-const handleSubmit = ()=>{
-  e.preventDefault();
-  console.log(credential)
-}
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("credential")
+    console.log(credential)
+    try {
+      console.log(credential)
+      const response = await useraxios.post('/api/login/', credential);
+      
+      // Assuming your backend returns tokens in response.data
+      const { access, refresh } = response.data;
+
+      // Store tokens in localStorage for future requests
+      localStorage.setItem('userAccessToken', access);
+      localStorage.setItem('userRefreshToken', refresh);
+
+      // Redirect or perform any other necessary actions after successful login
+      console.log("Login successful!");
+    } catch (error) {
+      console.error("Login failed:", error.message);
+      // Handle login error, show error message to the user, etc.
+    }
+  };
 
   return (
-    <>
-      <Navbar/>
-      <form className=" flex w-full bg-white justify-center font-josefin-sans text-sm"
-      onSubmit={handleSubmit}>
-      <div className="input_box text-left w-1/4">
-        <div className="">
-          <h1 className=" font-bold text-4xl py-5 text-center">Login</h1>
-        </div>
-        <div className="py-2">
-          <label htmlFor="">Email Address</label>
-          <div className="input_container  border-2 border-customOutline px-9 pb-1 pt-1 hover:border-black">
-            <input type="email"
-             className="input_column outline-none text-lg w-full bg-white"
-             id="email"
-             name="email"
-             value={credential.email}
-             onChange={handleChange}
-             autoComplete="email"
-             />
-          </div>
-        </div>
-        <div className="py-2">
-          <label htmlFor="">Password</label>
-          <div className="input_container  border-2 border-customOutline px-9 pb-1 pt-1 hover:border-black">
-            <input 
-            type="password" 
-            id="password"
-            className="input_column outline-none text-lg w-full"
-            // value={credential.password}
-            onChange={handleChange}
+    <div className="lg:flex flex-col items-center font-josefin-sans justify-center">
+      <Navbar />
+      <div className="bg-white p-8 w-96">
+        <h2 className="text-4xl font-bold mb-4">Login</h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label className="block mb-1">Username:</label>
+            <input
+              type="text"
+              name="username"
+              value={credential.username}
+              onChange={handleChange}
+              className="w-full border border-gray-300 px-3 py-1"
             />
           </div>
-        </div>
-        <div className="py-2">
-          <div className="input_container  border-2 bg-black border-customOutline px-9 pb-2 pt-3 hover:border-black">
-            <button 
-            className=" text-white text-xs w-full text-center"
-            >
-              LOGIN
-            </button>
+          <div>
+            <label className="block mb-1">Password:</label>
+            <input
+              type="password"
+              name="password"
+              value={credential.password}
+              onChange={handleChange}
+              className="w-full border border-gray-300 px-3 py-1"
+            />
           </div>
-        </div>
-        <p className=" text-center">or</p>
+          <button
+            type="submit"
+            className="w-full bg-black text-white py-2 px-4 text-sm"
+          >
+            LOGIN
+          </button>
+          <p className=" text-center">or</p>
         <div className="py-2">
         <Link to="/Register">
-          <div className="input_container  border-2 bg-white border-customOutline px-9 pb-2 pt-3 hover:border-black">          
-            <button className=" text-black text-xs w-full text-center">
+          <div className="input_container  border-2 bg-white border-customOutline px-9 pb-1 pt-1 hover:border-black">          
+            <button className=" text-black text-sm w-full text-center">
               REGISTER
             </button>
           </div>
           </Link>
         </div>
+        </form>
+        <p className="mt-4">
+          Don't have an account? <Link to="/register">Register</Link>
+        </p>
       </div>
-    </form>
-    </>
-   
+    </div>
   );
 };
 

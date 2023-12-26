@@ -9,7 +9,7 @@ import {
   const HomePages = lazy(() => import("../views/Home"));
   const UserLoginPage = lazy(() => import("../views/Login"));
   const SignupPage = lazy(()=> import("../views/Register"))
-
+  const ProductList = lazy(()=> import ("../views/ProductList"))
   const MainRoutes = () => {
     return (
       <div>
@@ -22,6 +22,7 @@ import {
                 <Route path="/logout" element={<LoginPage />} />
                 <Route path="/userlogin" element={<UserLoginPage />} />
                 <Route path="/register" element={<SignupPage />} />
+                <Route path="/products" element={<ProductList />} />
             </Routes>
           </Suspense>
         </Router>

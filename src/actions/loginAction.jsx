@@ -3,7 +3,7 @@
 // import axios from "../axios";
 
 // export const loginUser = createAsyncThunk("login/loginUser", async (credentials) => {
-//   const response = await axios.post("/api/token/", credentials);
+//   const response = await axios.post("/api/login/", credentials);
 //   const data = await response.data;
 //   console.log(jwt_decode(data.access));
 //   if (response.status === 200) {
