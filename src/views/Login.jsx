@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/user/Navbar";
 import { Link } from "react-router-dom";
-import useraxios from "../useraxios"; // Update the path
+import useraxios from "../useraxios";
 
 export const Login = () => {
   const [credential, setCredential] = useState({
@@ -18,27 +18,22 @@ export const Login = () => {
       };
     });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("credential")
-    console.log(credential)
+    console.log("credential");
+    console.log(credential);
     try {
-      console.log(credential)
-      const response = await useraxios.post('/api/login/', credential);
-      
-      // Assuming your backend returns tokens in response.data
+      console.log(credential);
+      const response = await useraxios.post("/api/login/", credential);
+
       const { access, refresh } = response.data;
 
-      // Store tokens in localStorage for future requests
-      localStorage.setItem('userAccessToken', access);
-      localStorage.setItem('userRefreshToken', refresh);
+      localStorage.setItem("userAccessToken", access);
+      localStorage.setItem("userRefreshToken", refresh);
 
-      // Redirect or perform any other necessary actions after successful login
       console.log("Login successful!");
     } catch (error) {
       console.error("Login failed:", error.message);
-      // Handle login error, show error message to the user, etc.
     }
   };
 
@@ -75,15 +70,15 @@ export const Login = () => {
             LOGIN
           </button>
           <p className=" text-center">or</p>
-        <div className="py-2">
-        <Link to="/Register">
-          <div className="input_container  border-2 bg-white border-customOutline px-9 pb-1 pt-1 hover:border-black">          
-            <button className=" text-black text-sm w-full text-center">
-              REGISTER
-            </button>
+          <div className="py-2">
+            <Link to="/Register">
+              <div className="input_container  border-2 bg-white border-customOutline px-9 pb-1 pt-1 hover:border-black">
+                <button className=" text-black text-sm w-full text-center">
+                  REGISTER
+                </button>
+              </div>
+            </Link>
           </div>
-          </Link>
-        </div>
         </form>
         <p className="mt-4">
           Don't have an account? <Link to="/register">Register</Link>
@@ -92,5 +87,4 @@ export const Login = () => {
     </div>
   );
 };
-
 export default Login;
