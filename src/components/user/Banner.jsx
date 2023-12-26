@@ -1,10 +1,10 @@
 import React from 'react'
+import bannerImg from '../../assets/alexa.png'
 
 const Banner = () => {
   return (
-    <div className=' bg-slate-600 w-full h-96'>
-      <img src="" alt="" className="banner_img" />       
-<h1>Banner</h1>
+    <div className='w-full'>
+      <img src={bannerImg} alt="" className="banner_img w-full" />       
     </div>
   )
 }
