@@ -10,7 +10,7 @@ const Popular = () => {
   }, []);
   return (
     <div
-      className=" font-josefin-sans py-10 w-full"
+      className=" font-josefin-sans py-10 w-full px-10"
       data-aos="fade-right"
       data-aos-duration="2000"
     >

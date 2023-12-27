@@ -9,8 +9,8 @@ const Navbar = () => {
     <div className="flex w-full bg-white h-24 text-center font-josefin-sans">
       <div className="hidden lg:flex w-1/3">
         <ul className="flex justify-center gap-7 pt-7 pl-7 text-lg">
-          <li className="nav_title">Home</li>
-          <li className="nav_title">Cart</li>
+          <li className="nav_title"><Link to="/">Home</Link></li>
+          <li className="nav_title"><Link to="/shop">Shop</Link></li>
           <li className="nav_title">Orders</li>
           <li className="nav_title">About Us</li>
         </ul>
