@@ -37,12 +37,12 @@ const BottomFooter = () => {
           <img
             src={VisaLogo}
             alt="Payment Gateway Logo"
-            className="w-16 h-auto"
+            className="w-10 h-auto"
           />
           <img
             src={PaypalLogo}
             alt="Payment Gateway Logo"
-            className="w-16 h-auto"
+            className="w-14 h-auto"
           />
         </div>
       </div>

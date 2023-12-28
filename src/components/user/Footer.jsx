@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-blacked py-16 text-sm">
+    <footer className="bg-white text-blacked py-16 text-sm border-y ">
       <div className="container mx-auto flex flex-col md:flex-row font-josefin-sans">
         {/* Left Side */}
         <div className="w-full ml-5 md:w-1/2 mb-4 md:mb-0">
@@ -38,7 +38,7 @@ const Footer = () => {
               Lorem ipsum dolor sit amet{' '}
             </p>
             <div className="mb-4">
-              <h1 className=" text-6xl font-bold pr-5">LOGO</h1>
+              <h1 className=" text-5xl font-bold pr-5">LOGO</h1>
             </div>
           </div>
         </div>
