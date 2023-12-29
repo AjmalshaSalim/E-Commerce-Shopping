@@ -6,6 +6,7 @@ import productImage3 from '../assets/BandO1.jpg';
 import Navbar from '../components/user/Navbar';
 import Footer from '../components/user/Footer';
 import BottomFooter from '../components/user/BottomFooter';
+import RelatedProducts from '../components/user/RelatedProducts';
 
 const ProductDetail = () => {
   const [currentImage, setCurrentImage] = useState(productImage1);
@@ -66,6 +67,7 @@ const ProductDetail = () => {
         </div>
       </div>
     </div>
+    <RelatedProducts />
     <Footer/>
     <BottomFooter/>
     </>

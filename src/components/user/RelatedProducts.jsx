@@ -10,7 +10,7 @@ const RelatedProducts = () => {
     AOS.refresh();
   }, []);
   return (
-    <div className=" font-josefin-sans py-10 w-full px-10">
+    <div className=" font-josefin-sans py-10 w-full px-10 text-center">
       <h1 className="text-3xl font-bold pb-2">Similar Products</h1>
       <p className="text-md text-gray-600 pb-7">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
