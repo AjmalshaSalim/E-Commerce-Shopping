@@ -1,8 +1,7 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import ProductImg from "../../assets/BandO2.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 
 const ListCard = ({ title, description }) => {
   useEffect(() => {
@@ -11,7 +10,11 @@ const ListCard = ({ title, description }) => {
   }, []);
   return (
     <>
-      <div className="w-full flex flex-col md:flex-row border-x border-t rounded-md p-2 md:m-4 shadow-md text-black " data-aos="fade-right" data-aos-duration="2000">
+      <div
+        className="w-full flex flex-col md:flex-row border-x border-t rounded-md p-2 md:m-4 shadow-md text-black "
+        data-aos="fade-right"
+        data-aos-duration="2000"
+      >
         {/* Product Image (Left Side) */}
         <div className="md:w-1/4 overflow-hidden h-40">
           <div className="w-48 overflow-hidden">
