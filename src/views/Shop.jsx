@@ -16,8 +16,8 @@ const Shop = () => {
   return (
     <div className=" w-full text-center">
       <Navbar />
-      <FunctionalNav />
       <BannerShop/>
+      <FunctionalNav />
       <div
         className=" pb-10 px-10"
         data-aos="fade-right"

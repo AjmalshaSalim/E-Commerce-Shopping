@@ -6,7 +6,7 @@ import { LuMenu } from "react-icons/lu";
 
 const Navbar = () => {
   return (
-    <div className="flex w-full bg-white h-24 text-center font-josefin-sans">
+    <div className="flex w-full bg-white h-24 text-center font-josefin-sans border-b">
       <div className="hidden lg:flex w-1/3">
         <ul className="flex justify-center gap-7 pt-7 pl-7 text-lg">
           <li className="nav_title">

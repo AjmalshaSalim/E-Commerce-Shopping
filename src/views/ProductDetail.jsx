@@ -61,8 +61,8 @@ const ProductDetail = () => {
         <div className="">
         <p className="text-lg font-bold mb-5">Offer Price : ₹299.00</p>
         <div className="flex space-x-4">
-          <button className="bg-black text-white w-36 px-2 py-2 text-xs">BUY NOW</button>
-          <button className="bg-white text-black w-36 px-2 py-2 border-2 border-black">Add to Cart</button>
+          <button className="bg-black text-white w-36 px-2 py-2 text-xs border border-black">BUY NOW</button>
+          <button className="bg-white text-black w-36 px-2 py-2 border border-black">Add to Cart</button>
         </div>
         </div>
       </div>

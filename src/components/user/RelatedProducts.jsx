@@ -20,7 +20,6 @@ const RelatedProducts = () => {
         <CardDetailed />
       </div>
       <div className=" pt-14 pb-5">
-        
         <button className=" bg-black text-white text-xs py-3 px-6 hover:shadow">
           <Link to="/shop">VIEW MORE</Link>
         </button>
