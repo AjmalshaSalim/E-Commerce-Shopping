@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import { LuMenu } from "react-icons/lu";
 
 const Navbar = ({ cartQty }) => {
+  const OpenMenu=()=>{
+    //here 
+  }
   return (
     <div className="flex w-full bg-white h-24 text-center font-josefin-sans border-b">
       <div className="hidden lg:flex w-1/3">
@@ -45,9 +48,9 @@ const Navbar = ({ cartQty }) => {
           <li className="nav_title">
             <Link to="/Login">Log In</Link>
           </li>
-          <li className="nav_title pt-1 text-xl">
+          <li className="lg:hidden nav_title pt-1 text-xl">
             {" "}
-            <LuMenu />
+            <button onClick={OpenMenu}><LuMenu /></button>
           </li>
         </ul>
       </div>
