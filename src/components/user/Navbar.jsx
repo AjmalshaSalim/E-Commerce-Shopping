@@ -4,7 +4,7 @@ import { FiHeart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { LuMenu } from "react-icons/lu";
 
-const Navbar = () => {
+const Navbar = ({ cartQty }) => {
   return (
     <div className="flex w-full bg-white h-24 text-center font-josefin-sans border-b">
       <div className="hidden lg:flex w-1/3">
@@ -30,6 +30,9 @@ const Navbar = () => {
         <ul className="flex absolute right-2 gap-7 pt-7 sm:right-7">
           <li className="nav_title text-xl pt-1">
             <Link to="/cart">
+              <div className=" bg-black text-white rounded-full text-xs font-light absolute top-5 left-5 px-1">
+                {cartQty}
+              </div>
               <BsCart3 />
             </Link>
           </li>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/user/Navbar";
 import Footer from "../components/user/Footer";
 import BottomFooter from "../components/user/BottomFooter";
-import ListCard from "../components/user/ListCard";
+import ListCard from "../components/user/WishlistList";
 
 const Wishlist = () => {
   const initialCardsData = [

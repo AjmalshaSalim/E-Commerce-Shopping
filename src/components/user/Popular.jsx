@@ -27,9 +27,11 @@ const Popular = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
           reprehenderit!
         </p>
-        <button className=" bg-black text-white text-xs py-3 px-6 hover:shadow">
-          <Link to="/shop">VIEW ALL PRODUCTS</Link>
-        </button>
+        <Link to="/shop">
+          <button className=" bg-black text-white text-xs py-3 px-6 hover:shadow">
+            VIEW ALL PRODUCTS
+          </button>
+        </Link>
       </div>
     </div>
   );
