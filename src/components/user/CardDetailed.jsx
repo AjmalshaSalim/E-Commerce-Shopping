@@ -1,6 +1,7 @@
 // Card.js
 import React from 'react';
 import cardImg from '../../assets/BotCard.png';
+import { Link } from 'react-router-dom';
 
 const CardDetailed = () => {
   const cardsData = [
@@ -66,6 +67,7 @@ const CardDetailed = () => {
   return (
     <div className="cardContainer mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 font-josefin-sans">
       {cardsData.map (card => (
+        <Link to="/productDetail">
         <div key={card.id} className="p-4 shadow-md-right shadow-md-bottom">
           <div className=" shadow-lg pb-3 hover:shadow-2 hover:shadow-gray-400">
             <div className="mb-4 w-full h-80 overflow-hidden">
@@ -84,13 +86,14 @@ const CardDetailed = () => {
                   {card.category}
                 </h2>
               </div>
-              <div className="w-1/3 text-md">
-                <p className="text-cyan-900">Price : {card.price} ₹</p>
+              <div className="w-1/3 text-md pr-1">
+                <p className="text-cyan-900">Price : ₹ {card.price}</p>
                 <p className="text-green-800">20% Off</p>
               </div>
             </div>
           </div>
         </div>
+        </Link>
       ))}
     </div>
   );

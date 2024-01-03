@@ -28,8 +28,8 @@ const Popular = () => {
           reprehenderit!
         </p>
         <Link to="/shop">
-          <button className=" bg-black text-white text-xs py-3 px-6 hover:shadow">
-            VIEW ALL PRODUCTS
+          <button className=" bg-black text-white py-2 px-6 hover:shadow">
+            View All Products
           </button>
         </Link>
       </div>

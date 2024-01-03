@@ -10,16 +10,16 @@ const BottomFooter = () => {
         {/* Left Side */}
         <div className="flex items-center mb-5 md:mb-2">
           <div className="flex space-x-4">
-            <a href="/" className="text-xl">
+            <a href="/" className="text-xl hover:text-cyan-700">
               <FaTwitter />
             </a>
-            <a href="/" className="text-xl">
+            <a href="/" className="text-xl hover:text-cyan-700">
               <FaFacebook />
             </a>
-            <a href="/" className="text-xl">
+            <a href="/" className="text-xl hover:text-cyan-700">
               <FaWhatsapp />
             </a>
-            <a href="/" className="text-xl">
+            <a href="/" className="text-xl hover:text-cyan-700">
               <FaInstagram />
             </a>
           </div>

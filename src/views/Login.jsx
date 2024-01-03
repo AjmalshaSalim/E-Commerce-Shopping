@@ -65,16 +65,16 @@ export const Login = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-black text-white py-2 px-4 text-sm"
+            className="w-full bg-black text-white py-2 px-4"
           >
-            LOGIN
+            Login
           </button>
           <p className=" text-center">or</p>
           <div className="py-2">
             <Link to="/Register">
               <div className="input_container  border-2 bg-white border-customOutline px-9 pb-1 pt-1 hover:border-black">
-                <button className=" text-black text-sm w-full text-center">
-                  REGISTER
+                <button className=" text-black w-full text-center">
+                  Register
                 </button>
               </div>
             </Link>

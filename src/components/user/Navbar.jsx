@@ -5,21 +5,23 @@ import { Link } from "react-router-dom";
 import { LuMenu } from "react-icons/lu";
 
 const Navbar = ({ cartQty }) => {
-  const OpenMenu=()=>{
-    //here 
-  }
+  const OpenMenu = () => {
+    //here
+  };
   return (
     <div className="flex w-full bg-white h-24 text-center font-josefin-sans border-b">
       <div className="hidden lg:flex w-1/3">
         <ul className="flex justify-center gap-7 pt-7 pl-7 text-lg">
-          <li className="nav_title">
-            <Link to="/productDetail">Home</Link>
+          <li className="nav_title hover:text-cyan-700">
+            <Link to="/">Home</Link>
           </li>
-          <li className="nav_title">
+          <li className="nav_title hover:text-cyan-700">
             <Link to="/shop">Shop</Link>
           </li>
-          <li className="nav_title">Orders</li>
-          <li className="nav_title">
+          <li className="nav_title  hover:text-cyan-700">
+            <Link to="/orders">Orders</Link>
+          </li>
+          <li className="nav_title hover:text-cyan-700">
             <Link to="/aboutUs">About Us</Link>
           </li>
         </ul>
@@ -31,7 +33,7 @@ const Navbar = ({ cartQty }) => {
       </div>
       <div className="nav_right w-1/3 text-lg">
         <ul className="flex absolute right-2 gap-7 pt-7 sm:right-7">
-          <li className="nav_title text-xl pt-1">
+          <li className="nav_title text-xl pt-1 hover:text-cyan-700">
             <Link to="/cart">
               <div className=" bg-black text-white rounded-full text-xs font-light absolute top-5 left-5 px-1">
                 {cartQty}
@@ -39,18 +41,20 @@ const Navbar = ({ cartQty }) => {
               <BsCart3 />
             </Link>
           </li>
-          <li className="nav_title pt-1">
+          <li className="nav_title pt-1 hover:text-cyan-700">
             {" "}
             <Link to="/wishlist">
               <FiHeart />
             </Link>{" "}
           </li>
-          <li className="nav_title">
+          <li className="nav_title hover:text-cyan-700">
             <Link to="/Login">Log In</Link>
           </li>
-          <li className="lg:hidden nav_title pt-1 text-xl">
+          <li className="lg:hidden nav_title pt-1 text-xl hover:text-cyan-700">
             {" "}
-            <button onClick={OpenMenu}><LuMenu /></button>
+            <button onClick={OpenMenu}>
+              <LuMenu />
+            </button>
           </li>
         </ul>
       </div>

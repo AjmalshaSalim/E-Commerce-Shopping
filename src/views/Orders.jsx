@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/user/Navbar";
 import Footer from "../components/user/Footer";
 import BottomFooter from "../components/user/BottomFooter";
-import Cards from "../components/user/CartList";
+import Cards from "../components/user/OrdersList";
 
-const Cart = () => {
+const Orders = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -24,7 +24,7 @@ const Cart = () => {
     <>
       <Navbar cartQty={cartQty} />
       <div className=" text-center">
-        <h1 className=" text-3xl pt-6 font-bold pb-2">My Cart</h1>
+        <h1 className=" text-3xl pt-6 font-bold pb-2">My Orders</h1>
       </div>
       <div className=" font-josefin-sans text-center bg-white w-full">
         {initialCardsData.length > 0 ? (
@@ -52,4 +52,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Orders;

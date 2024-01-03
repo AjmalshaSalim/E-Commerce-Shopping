@@ -9,24 +9,24 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between">
             {/* First Row */}
             <div className="mb-4 md:mb-0 text-left">
-              <p className=" text-gray-800 pb-2">About Us</p>
-              <p className=" text-gray-800 pb-2">Contact Us</p>
-              <p className=" text-gray-800 pb-2">Store Locations</p>
-              <p className=" text-gray-800 pb-2">Address</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">About Us</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">Contact Us</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">Store Locations</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">Address</p>
             </div>
             {/* Second Row */}
             <div className="mb-4 md:mb-0 text-left">
-              <p className=" text-gray-800 pb-2">FAQ</p>
-              <p className=" text-gray-800 pb-2">Shipping & Return</p>
-              <p className=" text-gray-800 pb-2">Order Tracking</p>
-              <p className=" text-gray-800 pb-2">Privacy Policy</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">FAQ</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">Shipping & Return</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">Order Tracking</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">Privacy Policy</p>
             </div>
             {/* Third Row */}
             <div className=" text-left">
-              <p className=" text-gray-800 pb-2">Living Room</p>
-              <p className=" text-gray-800 pb-2">Bathroom</p>
-              <p className=" text-gray-800 pb-2">Kitchen Appliances</p>
-              <p className=" text-gray-800 pb-2">Lighting</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">Living Room</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">Bathroom</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">Kitchen Appliances</p>
+              <p className=" text-gray-800 pb-2 hover:text-cyan-700">Lighting</p>
             </div>
           </div>
         </div>

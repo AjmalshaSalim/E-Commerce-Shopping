@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/user/Navbar";
 import Footer from "../components/user/Footer";
 import BottomFooter from "../components/user/BottomFooter";
@@ -16,6 +16,9 @@ const Wishlist = () => {
   ];
 
   const [cardsData, setCardsData] = useState(initialCardsData);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />
