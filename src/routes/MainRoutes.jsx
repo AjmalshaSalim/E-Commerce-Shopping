@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Loader from "../components/loader/Loader";
 import { SnackbarProvider } from 'notistack';
+const ErrorPage = lazy(() => import("../views/Error"));
 const LoginPage = lazy(() => import("../views/Login"));
 const HomePages = lazy(() => import("../views/Home"));
 const SignupPage = lazy(() => import("../views/Register"));
@@ -43,6 +44,7 @@ const MainRoutes = () => {
               <Route path="/aboutUs" element={<AboutUs />} />
               <Route path="/productDetail" element={<ProductDetail />} />
               <Route path="/shop" element={<ShopPage />} />
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
           </Suspense>
           </SnackbarProvider>
